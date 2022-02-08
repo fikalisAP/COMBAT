@@ -184,15 +184,16 @@ a {
 }
 
 .services__item {
+    display: block;
     background: url(../images/services-bg1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
+    display: block;
+    z-index: 1;
     justify-content: center;
     color: #fff;
-    padding: 0 30px;
+    padding: 30px 30px;
     height: 460px;
     position: relative;
 }
@@ -204,6 +205,7 @@ a {
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     background: linear-gradient(180deg, rgba(13, 35, 68, 0.7) 53.87%, rgba(0, 0, 0, 0.7) 112.72%);
@@ -219,14 +221,19 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #294570;
+    background: linear-gradient(180deg, rgba(19, 44, 82, 0.7) 53.87%, rgba(19, 44, 82, 0.7) 53.87%);
     opacity: 0.65;
+    transition: all .4s;
 }
-
 .services__item:hover .services__item-button {
     display: block;
+    
 }
-
+.services__item-button:hover {
+    background-color: #fff;
+    transition: all .4s;
+    color: #303030;
+}
 .services__item-title {
     z-index: 1;
     font-weight: bold;
