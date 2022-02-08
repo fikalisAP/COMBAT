@@ -195,6 +195,7 @@ a {
     padding: 0 30px;
     height: 460px;
     position: relative;
+    z-index: 0;
 }
 
 .services__item::after {
@@ -221,6 +222,7 @@ a {
     left: 0;
     background-color: #294570;
     opacity: 0.65;
+    z-index: 0;
 }
 
 .services__item:hover .services__item-button {
