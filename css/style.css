@@ -128,12 +128,51 @@ a {
     color: #FFFFFF;
 }
 
+.menu__btn {
+    display: none;
+    width: 40px;
+    position: relative;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+
+}
+
+.menu__btn span {
+    display: block;
+    height: 2px;
+    background-color: #303030;
+}
+
+.menu__btn span::after,
+.menu__btn span::before {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: #303030;
+    position: absolute;
+}
+
+.menu__btn span::after {
+    top: 10px;
+    left: -10px;
+}
+
+.menu__btn span::before {
+    top: -10px;
+    left: -10px;
+}
+
+
 /*********************** /HEADER ***********************/
 
 /*********************** BENEFITS ***********************/
 
 .benefits {
-    background: url(../images/benefits-bg.png);
+    background: url(../images/benefits-bg.png) no-repeat center;
+    background-size: cover;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -144,8 +183,7 @@ a {
 
 .benefits__inner {
     display: flex;
-    justify-content: space-between;
-    padding: 45px 0;
+    justify-content: center;
 }
 
 .benefits__item {
@@ -153,6 +191,7 @@ a {
     flex-direction: column;
     align-items: center;
     width: 315px;
+    padding: 45px 0;
 }
 
 .benefits__item-images {
@@ -498,20 +537,24 @@ a {
 
 .footer__logo {}
 
-.footer__contacts{
+.footer__contacts {
     text-align: center;
 }
+
 .footer__contacts span {
     display: block;
     margin-bottom: 20px;
 }
-.footer__contacts-tel{
+
+.footer__contacts-tel {
     display: flex;
     align-items: top;
 }
+
 .footer__contacts-tel img {
     margin-right: 15px;
 }
+
 .footer__contacts-tel-link {
     color: #fff;
     font-weight: 600;
@@ -519,8 +562,64 @@ a {
     line-height: 25px;
 }
 
-.footer__social img+img{
+.footer__social img+img {
     margin-left: 35px;
 }
 
 /*********************** /FOOTER ***********************/
+
+
+@media (max-width: 1800px) {
+    .header {
+        background-size: auto;
+        height: 1000px;
+    }
+}
+
+@media (max-width: 1233px) {
+    .benefits__inner {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 1160px) {
+    .header__title span {
+        display: block;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .menu__btn {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu__contacts {
+        text-align: center;
+    }
+}
+
+@media (max-width:900px) {
+    .header {
+        background-size: auto;
+    }
+}
+@media (max-width:700px) {
+    .footer__inner{
+        flex-direction: column;
+    }
+    .footer__contacts{
+        margin: 30px 0;
+    }
+}
+
+@media (max-width:6600px) {
+    .header {
+        background-size: auto;
+    }
+}
