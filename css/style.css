@@ -137,7 +137,7 @@ a {
     margin: 0;
     border: none;
     outline: none;
-
+    cursor: pointer;
 }
 
 .menu__btn span {
@@ -596,9 +596,31 @@ a {
     }
 
     .menu {
-        display: none;
+        /* display: none; */
     }
-
+    .header__top img{
+        z-index: 1;
+    }
+    .menu__contacts{
+        z-index: 1;
+    }
+    .menu__items{
+        transform: translateY(-200%);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        padding: 150px 0 30px 0;
+        background-color: #fff;
+    }
+    .active{
+        transform: translateY(0);
+    }
+    .menu__item{
+        margin-bottom: 20px;
+    }
     .menu__contacts {
         text-align: center;
     }
