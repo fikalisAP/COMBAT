@@ -120,6 +120,10 @@ a {
 }
 
 .btn-link {
+    width: max-content;
+    background-repeat: no-repeat;
+    min-width: 230px;
+    display: block;
     background: url(../images/button-bg.jpg);
     padding: 20px 40px;
     font-weight: 700;
@@ -127,7 +131,11 @@ a {
     line-height: 21px;
     color: #FFFFFF;
 }
-
+.news__btn {
+    text-align: center;
+    margin: 0 auto;
+   
+}
 .menu__btn {
     display: none;
     width: 40px;
@@ -333,9 +341,11 @@ a {
 }
 
 .services__tactical-inner {
-    max-width: 805px;
 }
-
+.services__tactical-text {
+    max-width: 805px;
+    margin-right: 40px;
+}
 .services__tactical-title {
     font-weight: 500;
     font-size: 28px;
@@ -455,7 +465,6 @@ a {
     box-shadow: 0px 2px 7px 0px #0000006E;
     transition: all .5s ease-in;
     margin-bottom: 55px;
-    height: 340px;
 }
 
 
@@ -463,12 +472,17 @@ a {
     box-shadow: -2px 3px 8px rgba(0, 0, 0, 0.25);
 }
 .news__wrapper-img {
+    position: relative;
+    width: 100%;
     max-width: 600px;
-    width: 600px;
+    min-height: 200px;
 }
 .news__images {
-    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 .news__content {
@@ -519,10 +533,7 @@ a {
     transition: all .5s ease-in;
 }
 
-.news__btn {
-    text-align: center;
-    margin: 0 auto;
-}
+
 
 
 
@@ -599,6 +610,29 @@ a {
 }
 
 @media (max-width: 1000px) {
+    .services__tactical {
+        flex-direction: column;
+        text-align: center;
+    }
+    .services__tactical-text {
+        margin-right: 0;
+    }
+    .services__tactical-inner {
+        margin-bottom: 50px;
+    }
+    .news__wrapper-img {
+        max-width: 450px;
+    }
+    .news__data {
+        margin-bottom: 15px;
+    }
+    .news__content {
+        font-size: 14px;
+    }
+    .news__title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
     .menu__btn {
         display: block;
     }
@@ -639,6 +673,21 @@ a {
         background-size: auto;
     }
 }
+@media (max-width:760px) {
+    .news__item {
+        flex-direction: column-reverse;
+    }
+    .news__content {
+        width: auto;
+    }
+    .news__wrapper-img {
+        max-width: 100%;
+        min-height: 300px;
+    }
+    .news__description {
+        margin-bottom: 15px;
+    }
+}
 @media (max-width:700px) {
     .footer__inner{
         flex-direction: column;
@@ -648,8 +697,20 @@ a {
     }
 }
 
-@media (max-width:6600px) {
+@media (max-width:660px) {
     .header {
         background-size: auto;
     }
+    .reviews {
+        padding: 60px;
+    }
+    .reviews__slider-item {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:400px) {
+    .reviews {
+        padding: 20px;
+    }
+
 }
