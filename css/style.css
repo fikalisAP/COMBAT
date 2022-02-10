@@ -615,6 +615,7 @@ a {
     .header__title span {
         display: block;
     }
+
     .header {
         height: 100%;
     }
@@ -785,11 +786,25 @@ a {
     .menu__email {
         padding-bottom: 0;
     }
+
+    .header__top img {
+        max-width: 70px;
+    }
 }
 
 @media (max-width:450px) {
     .header__title {
         font-size: 36px;
+    }
+
+    .menu__btn {
+        width: 30px;
+    }
+
+    .menu__btn span::after,
+    .menu__btn span::before {
+        width: 25px;
+        left: -5px;
     }
 }
 
@@ -799,15 +814,16 @@ a {
     }
 
     .header__top img {
-        max-width: 70px;
+        max-width: 60px;
     }
 
     .menu__btn {
-        width: 30px;
+        width: 25px;
     }
 
     .menu__btn span::after,
     .menu__btn span::before {
-        width: 30px;
+        width: 20px;
+        left: -5px;
     }
 }
