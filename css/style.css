@@ -657,11 +657,15 @@ a {
 
     .header__top img {
         z-index: 1;
+        margin-right: auto;
     }
 
     .menu__contacts {
         z-index: 1;
         font-size: 18px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .menu__items {
