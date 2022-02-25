@@ -742,6 +742,40 @@ a {
 
 /* ----------------- PAGE NEWS1 ------------- */
 
+
+/* --------- PAGE CONTACTS ---------- */
+
+
+.contacts__page {
+    margin-top: 50px;
+}
+.contacts__title {
+
+}
+.contacts__number {
+    display: block;
+    margin-top: 10px;
+}
+.block__contacts {
+    display: flex;
+    justify-content: space-between;
+}
+.block__contacts h2 {
+    margin-bottom: 20px;
+}
+.social__title {
+    margin-top: 30px;
+}
+.social__item + .social__item {
+    margin-left: 10px;
+}
+/* --------- / PAGE CONTACTS ---------- */
+
+.contacts__social {
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+}
 .piece__of__news {
     margin-top: 100px;
 }
@@ -779,7 +813,10 @@ a {
     .benefits__inner {
         flex-wrap: wrap;
     }
-
+    
+    .contacts__social {
+        max-width: 800px;
+    }
 }
 
 @media (max-width: 1160px) {
